@@ -95,7 +95,7 @@ class App extends Component {
             src="https://kodit.io/assets/images/logo.svg"
             alt="logo"
             className="logo"
-            onClick={() => (window.location.href = '/')}
+            onClick={() => (window.location.href = '/kodit-task')}
           />
           <FormContainer handleSubmit={this.handleSubmit} />
           <ResultContainer
