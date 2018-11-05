@@ -1,15 +1,15 @@
 {
-  "main.css": "/kodit-task/static/css/main.27c25a63.chunk.css",
-  "main.js": "/kodit-task/static/js/main.ab9ae30c.chunk.js",
-  "main.js.map": "/kodit-task/static/js/main.ab9ae30c.chunk.js.map",
+  "main.css": "/kodit-task/static/css/main.237c7616.chunk.css",
+  "main.js": "/kodit-task/static/js/main.9fcd5034.chunk.js",
+  "main.js.map": "/kodit-task/static/js/main.9fcd5034.chunk.js.map",
   "static/css/1.2520da07.chunk.css": "/kodit-task/static/css/1.2520da07.chunk.css",
   "static/js/1.12180dc0.chunk.js": "/kodit-task/static/js/1.12180dc0.chunk.js",
   "static/js/1.12180dc0.chunk.js.map": "/kodit-task/static/js/1.12180dc0.chunk.js.map",
   "runtime~main.js": "/kodit-task/static/js/runtime~main.448c5530.js",
   "runtime~main.js.map": "/kodit-task/static/js/runtime~main.448c5530.js.map",
   "static/css/1.2520da07.chunk.css.map": "/kodit-task/static/css/1.2520da07.chunk.css.map",
-  "static/css/main.27c25a63.chunk.css.map": "/kodit-task/static/css/main.27c25a63.chunk.css.map",
+  "static/css/main.237c7616.chunk.css.map": "/kodit-task/static/css/main.237c7616.chunk.css.map",
   "index.html": "/kodit-task/index.html",
-  "precache-manifest.4fa00c7bfaa526e11903686cb83b19bd.js": "/kodit-task/precache-manifest.4fa00c7bfaa526e11903686cb83b19bd.js",
+  "precache-manifest.83fdc0a1a55c6020911f33779c4038b0.js": "/kodit-task/precache-manifest.83fdc0a1a55c6020911f33779c4038b0.js",
   "service-worker.js": "/kodit-task/service-worker.js"
 }
