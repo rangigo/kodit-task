@@ -17,6 +17,8 @@ Note: returning an accurate estimation is not relevant and can be mocked up.
 * Data Visualization: I decided to go with Sunburst as it is powerful way to demonstrate part to whole relationships. Since the data related to the final result should be other apartments from the same street, they share some attributes with each other and Sunburst is a suitable chart to visualize them exhaustively.
 * Interactive widget: User should be able to navigate the detailed information about the apartment that is displayed on the chart by hovering. User can also lock the selection to highlight the needed information by clicking.
 
+## !Note
+The app only works with valid addresses from the provided dataset (e.g. 'Kuhatie 10', 'Iivisniementie 4'). Enter any other address will result in errors.
 
 ## Features
 * Form validation with user data
