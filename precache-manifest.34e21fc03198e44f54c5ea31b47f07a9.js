@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/kodit-task/static/js/runtime~main.448c5530.js"
   },
   {
-    "revision": "7c6ac3afd3e90dcf6d66",
-    "url": "/kodit-task/static/js/main.7c6ac3af.chunk.js"
+    "revision": "d1d2e8179a25cffa5dca",
+    "url": "/kodit-task/static/js/main.d1d2e817.chunk.js"
   },
   {
     "revision": "20456f7a92aa794b026b",
     "url": "/kodit-task/static/js/1.20456f7a.chunk.js"
   },
   {
-    "revision": "7c6ac3afd3e90dcf6d66",
+    "revision": "d1d2e8179a25cffa5dca",
     "url": "/kodit-task/static/css/main.06eb7869.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/kodit-task/static/css/1.b870f20a.chunk.css"
   },
   {
-    "revision": "32c566522dee18d3c53974ca31334f49",
+    "revision": "fd8bf25b974dc1df05b8090b6034cbf0",
     "url": "/kodit-task/index.html"
   }
 ];
