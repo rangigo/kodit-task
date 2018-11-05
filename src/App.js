@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 
 import FormContainer from './containers/FormContainer'
 import './App.scss'
-import ResultContainer from './containers/ResultContainer'
-import '../node_modules/react-vis/dist/style.css';
+import ResultContainer from './components/ResultContainer'
+import '../node_modules/react-vis/dist/style.css'
 
 class App extends Component {
   state = {
@@ -11,6 +11,7 @@ class App extends Component {
     result: null,
     relatedResults: [],
     submitted: false,
+    loading: false,
   }
 
   async componentDidMount() {
@@ -34,69 +35,74 @@ class App extends Component {
     }
   }
 
-  handleSubmit = (values) => {
-    // console.log(values)
+  handleSubmit = values => {
     // const values = {
     //   address: 'Kuhatie 10',
     //   area: 75,
     //   constructionYear: 1977,
     // }
-    const splitAddress = values.address.split(' ')
-    console.log(splitAddress)
-    const relatedResults = this.state.data.filter(
-      el => splitAddress[0] === el.street
-    )
-
-    const tempFinalResults = relatedResults.filter(
-      el => el.street_number === +splitAddress[1]
-    )
-
-    try {
-      const closestArea = tempFinalResults.reduce(
-        (prev, curr) =>
-          Math.abs(curr.size_sqm - +values.area) <
-          Math.abs(prev.size_sqm - +values.area)
-            ? curr
-            : prev
-      ).size_sqm
-
-      const closestYear = tempFinalResults
-        .filter(el => el.size_sqm === closestArea)
-        .reduce(
-          (prev, curr) =>
-            Math.abs(curr.built_year - +values.constructionYear) <
-            Math.abs(prev.built_year - +values.constructionYear)
-              ? curr
-              : prev
-        ).built_year
-
-      const result = tempFinalResults.find(
-        el => el.built_year === closestYear && el.size_sqm === closestArea
+    this.setState({ loading: true, submitted: true })
+    setTimeout(() => {
+      const splitAddress = values.address.split(' ')
+      const relatedResults = this.state.data.filter(
+        el => splitAddress[0] === el.street
       )
 
-      this.setState({
-        submitted: true,
-        relatedResults,
-        result,
-      })
-    } catch (err) {
-      console.log(err)
-      this.setState({ submitted: true })
-    }
+      const tempFinalResults = relatedResults.filter(
+        el => el.street_number === +splitAddress[1]
+      )
+
+      try {
+        const closestArea = tempFinalResults.reduce(
+          (prev, curr) =>
+            Math.abs(curr.size_sqm - +values.area) <
+            Math.abs(prev.size_sqm - +values.area)
+              ? curr
+              : prev
+        ).size_sqm
+
+        const closestYear = tempFinalResults
+          .filter(el => el.size_sqm === closestArea)
+          .reduce(
+            (prev, curr) =>
+              Math.abs(curr.built_year - +values.constructionYear) <
+              Math.abs(prev.built_year - +values.constructionYear)
+                ? curr
+                : prev
+          ).built_year
+
+        const result = tempFinalResults.find(
+          el => el.built_year === closestYear && el.size_sqm === closestArea
+        )
+
+        this.setState({
+          relatedResults,
+          result,
+          loading: false,
+        })
+      } catch (err) {
+        console.log(err)
+        this.setState({ loading: false })
+      }
+    }, 2000)
   }
 
   render() {
-    console.log('result', this.state.result)
-    console.log('relatedResults', this.state.relatedResults)
     return (
       <div className="app">
         <div className="app-container">
+          <img
+            src="https://kodit.io/assets/images/logo.svg"
+            alt="logo"
+            className="logo"
+          />
           <FormContainer handleSubmit={this.handleSubmit} />
           <ResultContainer
             data={this.state.result}
             submitted={this.state.submitted}
             result={this.state.result}
             relatedResults={this.state.relatedResults}
+            loading={this.state.loading}
           />
         </div>
       </div>

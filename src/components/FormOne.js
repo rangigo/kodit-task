@@ -83,6 +83,13 @@ const FormOne = ({ handleSubmit, invalid }) => {
 export default reduxForm({
   validate,
   form: 'evaluate',
-  initialValues: { city: 'helsinki' },
+  initialValues: {
+    city: 'helsinki',
+    ownership: 'own',
+    elevator: 'no',
+    bacony: 'no',
+    pipeRenovate: 'no',
+    facadeRenovate: 'no',
+  },
   destroyOnUnmount: false,
 })(FormOne)
