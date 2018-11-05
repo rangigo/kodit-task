@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/kodit-task/static/js/runtime~main.448c5530.js"
   },
   {
-    "revision": "538553a1813b21205b36",
-    "url": "/kodit-task/static/js/main.538553a1.chunk.js"
+    "revision": "ab9ae30c7a37705a6a31",
+    "url": "/kodit-task/static/js/main.ab9ae30c.chunk.js"
   },
   {
     "revision": "12180dc0da999aa27a8a",
     "url": "/kodit-task/static/js/1.12180dc0.chunk.js"
   },
   {
-    "revision": "538553a1813b21205b36",
-    "url": "/kodit-task/static/css/main.da7c14e5.chunk.css"
+    "revision": "ab9ae30c7a37705a6a31",
+    "url": "/kodit-task/static/css/main.27c25a63.chunk.css"
   },
   {
     "revision": "12180dc0da999aa27a8a",
     "url": "/kodit-task/static/css/1.2520da07.chunk.css"
   },
   {
-    "revision": "b9958735b3baefbc491e3f6659a093fd",
+    "revision": "2255da68045523c37ef7afe021cb9d9f",
     "url": "/kodit-task/index.html"
   }
 ];
