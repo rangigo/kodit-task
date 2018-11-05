@@ -1,44 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Kodit.io Front-end task
+## Live demo: https://rangigo.github.io/kodit-task/
+## Background
+Apartment sellers come to our website looking for a valuation. They land on this page*, fill
+in the apartment data, and get an estimated price for their home. As a follow-up step
+sellers can provide contact details in order to have an on-site inspection by one of
+Kodit.io’s specialists, in order to finalise the offer.
+## Task
+Implement a user interface providing the data-input functionality found in the current
+website valuation form and extend it by displaying not only an estimated price but also a
+data visualisation widget providing related insight. Data to populate the visualisation can
+be fetched from the endpoint provided below. The widget should be interactive and offer
+at least 1 level of drill-down information.
+Note: returning an accurate estimation is not relevant and can be mocked up.
 
-## Available Scripts
+## Explanation
+* Data Visualization: I decided to go with Sunburst as it is powerful way to demonstrate part to whole relationships. Since the data related to the final result should be other apartments from the same street, they share some attributes with each other and Sunburst is a suitable chart to visualize them exhaustively.
+* Interactive widget: User should be able to navigate the detailed information about the apartment that is displayed on the chart by hovering. User can also lock the selection to highlight the needed information by clicking.
 
-In the project directory, you can run:
 
-### `npm start`
+## Features
+* Form validation with user data
+* Data visualization with react-vis
+* Basic UI clone from kodit.io form evaluation
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies used
+* React 16.6
+* Redux Form (plan to migrate to Formik soon)
+* React Vis

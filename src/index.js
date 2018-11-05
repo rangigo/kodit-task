@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
 
 import { Provider } from 'react-redux'
 import { createStore, compose, combineReducers } from 'redux'
@@ -16,16 +15,14 @@ const composeEnhancers =
     : null || compose
 
 const rootReducer = combineReducers({
-  form: formReducer
+  form: formReducer,
 })
 
 const store = createStore(rootReducer, composeEnhancers())
 
 const app = (
   <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <App />
   </Provider>
 )
 
